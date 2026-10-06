@@ -25,9 +25,11 @@ export default function NotePreviewClient() {
   }
 
   if (isLoading) {
+    return (
       <Modal onClose={handleClose}>
         <p>Loading, please wait...</p>
       </Modal>
+    );
   }
 
   if (isError || !note) {
